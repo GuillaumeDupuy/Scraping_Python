@@ -1,0 +1,125 @@
+/* GLOBAL */
+
+h1 {
+  text-align: center;
+}
+
+/* NAVBAR */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+li {
+  display: inline;
+}
+
+/* GRID INDEX */
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    background-color: #000000;
+    padding: 4px;
+  }
+  
+.grid-item {
+  background-color: rgba(255, 255, 255);
+}
+
+.item {
+  grid-column: 1 / span 5 ;
+}
+
+/* CSS INDEX */
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  text-align: center;
+  padding: 4px;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10em;
+  margin-top: 73px;
+}
+
+.name{
+  font-size: 30px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em;
+}
+
+/* CSS DASHBOARD */
+
+.brut {
+  border-radius: 5px;
+  width: auto;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* CSS UPLOAD */
+
+input[type=file], select {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button {
+  width: 11%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  width: auto;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.upload {
+  text-align: center;
+}

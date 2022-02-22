@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Upload</title>
+    <link rel="stylesheet" href="../static/assets/style.css">
+  </head>
+  <body>
+
+    <ul>
+      <li><a href="/">Affichage CSS</a></li>
+      <li><a href="/dashboard">Affichage Brut</a></li>
+      <li><a href="/upload">Charger</a></li>
+    </ul>
+
+    <h1>Charger votre fichier CSV sur MongoDB</h1>
+
+    <div class="upload">
+
+      <span>Vous pouvez trouver le fichier <a href="https://drive.google.com/file/d/1athL-x2wausi6rUGnoowKK9gpeSzKkCc/view?usp=sharing">ici</a> </span>
+      
+      <br>
+      <br>
+  
+      <span>Ne vous inquiétez pas pour le nom de la DataBase ou de la Collection, Mongo s'en charge 😁</span>
+  
+      <br>
+      <br>
+
+      <div>
+        <form class="from"  method="POST" action="" enctype="multipart/form-data">
+          <input type="file" name="file">
+          <br>
+          <button value="Submit" class="button" >Envoyer</button>
+        </form>
+      </div>
+      
+    </div>
+
+  </body>
+</html>

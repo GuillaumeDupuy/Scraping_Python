@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/assets/style.css">
+  <title>Dashboard</title>
+</head>
+<body>
+  
+  <ul>
+    <li><a href="/">Affichage CSS</a></li>
+    <li><a href="/dashboard">Affichage Brut</a></li>
+    <li><a href="/upload">Charger</a></li>
+  </ul>
+
+  <h1>Affichage brut données json MongoDB</h1>
+
+  <div class="brut">
+
+    <ol>
+      <label>
+        {% for item in cards %}
+          <label>
+            <span>{{item}} <br> </span>
+          </label>
+        {% endfor %} 
+      </label>
+    </ol>
+  </div>
+
+</body>
+</html>
