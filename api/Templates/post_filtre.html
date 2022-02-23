@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../static/assets/style.css">
+    <title>Post Filtre</title>
+  </head>
+  <body>
+
+    <ul>
+      <li><a href="/">Affichage CSS</a></li>
+      <li><a href="/dashboard">Affichage Brut</a></li>
+      <li><a href="/post_filtre">Filtre</a></li>
+      <li><a href="/upload">Charger</a></li>
+    </ul>
+
+    <br>
+    <br>
+
+    <h1>Affichage Filtre CSS MongoDB</h1>
+
+    <div class="content">
+      <div>        
+        <form action="/affich_filtre/" method="post">
+          <!-- <label for="input">Enter Name</label>
+          <input type="text" name="input" value="" required> -->
+          <label for="number">Entrer le nombre de la carte</label>
+          <input type="number" name="number" value="Chiffre" required>
+          <button value="Submit" class="button2" >Envoyer</button>
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
