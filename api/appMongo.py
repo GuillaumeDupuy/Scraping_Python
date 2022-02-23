@@ -52,7 +52,7 @@ def uploadFiles():
           # save the file
       return redirect(url_for('upload'))
 
-def mongoimport(file_path,coll_name='cards', db_name='scraping',db_url='localhost', db_port=27017):
+def mongoimport(file_path,coll_name='cards', db_name='scraping2',db_url='localhost', db_port=27017):
     client = MongoClient(db_url, db_port)
     db = client[db_name]
     coll = db[coll_name]
@@ -87,6 +87,7 @@ def mongoimport(file_path,coll_name='cards', db_name='scraping',db_url='localhos
     # Rendering the dataframe as HTML table
     data.to_html(escape=False, formatters=dict(Image=path_to_image_html))
     HTML(data.to_html(escape=False,formatters=dict(Image=path_to_image_html)))
+
     payload = data.to_dict('records')
     coll.drop()
     coll.insert_many(payload)
