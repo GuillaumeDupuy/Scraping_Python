@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <link rel="stylesheet" href="../static/assets/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/style.css') }}">
     <title>Home</title>
   </head>
   <body>
@@ -25,7 +25,7 @@
         <div class="grid-item"><p class="name">  <strong>{{item['Nom']}}</strong></p></div>
         <div class="grid-item"><img src="{{item['Image']}}" alt=""></div>
         <div class="grid-item"><p class="index">  Rang de la carte :  {{item['Rang']}}</p></div>
-        <div class="grid-item"><p class="index">  Note des Joueurs :  {{item['Notation /100']}} %</p></div>
+        <div class="grid-item"><p class="index">  Note des Joueurs :  {{item['Notation /100']}} /100</p></div>
         <div class="grid-item"><p class="index">  Taux d'utilisation :  {{item['Utilisation %']}} %</p></div>
         <div class="grid-item"><p class="index">  Taux de victoire avec :  {{item['Victoire %']}} %</p></div>
         <div class="grid-item item"></div>

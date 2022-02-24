@@ -134,9 +134,9 @@ div {
   text-align: center;
 }
 
-label {
+.form_label {
   display: flex;
-  margin-left: 550px;
+  margin-left: 480px;
 }
 
 
@@ -153,4 +153,16 @@ label {
 
 .button2:hover {
   background-color: #45a049;
+}
+
+/* FILTER */
+
+.filtre {
+  text-align: center;
+  padding: 4px;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 12em;
+  margin-top: 73px;
 }

@@ -1,6 +1,6 @@
 <html>
   <head>
-    <link rel="stylesheet" href="../static/assets/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/style.css') }}">
     <title>Post Filtre</title>
   </head>
   <body>
@@ -20,10 +20,8 @@
     <div class="content">
       <div>        
         <form action="/affich_filtre/" method="post">
-          <!-- <label for="input">Enter Name</label>
-          <input type="text" name="input" value="" required> -->
-          <label for="number">Entrer le nombre de la carte</label>
-          <input type="number" name="number" value="Chiffre" required>
+          <label for="carte" class="form_label">Entrer un nom de carte (Première lettre en Majuscule) :</label>
+          <input type="text" name="carte" value="" required>
           <button value="Submit" class="button2" >Envoyer</button>
         </form>
       </div>

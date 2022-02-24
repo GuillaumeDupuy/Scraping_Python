@@ -37,15 +37,14 @@ def affich_filtre():
     df = df.drop(["_id"], axis=1)
     cards_dict = df.to_dict()
 
+    # for key,values in cards_dict.items():
+    # rang.append(values) 
+    # print(key)
+
     nom = []   
     for values in cards_dict['Nom'].items():
         nom.append(values) 
         # print(values)
-
-      
-    for key,values in cards_dict.items():
-        # rang.append(values) 
-        print(key)
 
     rang = []
     for values in cards_dict['Rang'].items():
@@ -75,40 +74,70 @@ def affich_filtre():
     # print(nom[int(request.form['number'])][1])
 
     # print(cards_dict['Nom'][0])
-    # print(str(request.form['input']))
     # print(str(request.form['number']))
 
-    # filtre = filter_set(cards_dict['Nom'], str(request.form['number']))
     # filtre = filter_set(test[int(request.form['number'])][1],str(request.form['input']))
-
-    name = nom[int(request.form['number'])][1]
-    rank = rang[int(request.form['number'])][1]
-    notes = note[int(request.form['number'])][1]
-    uses = use[int(request.form['number'])][1]
-    win = vic[int(request.form['number'])][1]
-    imgs = img[int(request.form['number'])][1]
-
-    # print(filtre)
     # filtre = list(filtre)
     # print(filtre)
 
-    return render_template('affich_filtre.html',name=name,rank=rank,notes=notes,uses=uses,win=win,imgs=imgs)
+    filtre = filter_set(nom, str(request.form['carte']))
+    filtre = list(filtre)
+
+    index = []
+    for i in filtre:
+        index.append(i[0])
+        # print(index)
+
+    rank = []
+    for x in range(len(index)):   
+        rank.append(rang[index[x]])
+        # print(index[x])
+
+    notes = []
+    for x in range(len(index)):   
+        notes.append(note[index[x]])
+        # print(index[x])
+
+    uses = []
+    for x in range(len(index)):   
+        uses.append(use[index[x]])
+        # print(index[x])
+    
+    win = []
+    for x in range(len(index)):   
+        win.append(vic[index[x]])
+        # print(index[x])
+
+    imgs = []
+    for x in range(len(index)):   
+        imgs.append(img[index[x]])
+        # print(index[x])
+
+    # name = nom[int(request.form['carte'])][1]
+    # rank = rang[int(request.form['carte'])][1]
+    # notes = note[int(request.form['carte'])][1]
+    # uses = use[int(request.form['carte'])][1]
+    # win = vic[int(request.form['carte'])][1]
+    # imgs = img[int(request.form['carte'])][1]
+
+    return render_template('affich_filtre.html',name=filtre,rank=rank,notes=notes,uses=uses,win=win,imgs=imgs)
 
 def filter_set(cards_dict, search_string):
     # print(cards_dict)
     # print(search_string)
     def iterator_func(x):
-        print(x)
-        if search_string in str(x):
-            return True
+        # print(x)
+        for v in x:
+            if search_string in str(v):
+                return True
         return False
     return filter(iterator_func, cards_dict)
 
 @app.route('/dashboard/')
 def dashboard():
     cards = mongo.db.cards.find({})
-    # for film in films:
-    #     print(film)
+    # for cards in cards:
+    #     print(cards)
     return render_template("dashboard.html",
         cards=cards)
 

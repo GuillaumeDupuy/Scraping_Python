@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <link rel="stylesheet" href="../static/assets/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/style.css') }}">
     <title>Afficher Filtre</title>
   </head>
   <body>
@@ -18,12 +18,35 @@
 
     <h1>Affichage Filtre CSS MongoDB</h1>
 
-    <div class="content">
+    <!-- <div class="content">
         <p><img src="{{ imgs }}" alt=""> <br>{{ name }}
           <br>Rang de la carte : {{ rank }} 
           <br> Note des Joueurs : {{ notes }} 
           <br> Taux d'utilisation : {{ uses }}
           <br> Taux de victoire avec : {{ win }}</p>
+    </div> -->
+
+    <div class="content">
+      <p class="filtre">
+        {% for item in imgs %}
+          <img src="{{ item[1] }}" alt="">
+        {% endfor %} 
+        {% for item in name %}
+          <br> {{item[1]}}<br>
+        {% endfor %}  
+        {% for item in rank %}
+          <br>Rang de la carte : {{ item[1] }} <br>
+        {% endfor %}     
+        {% for item in notes %}
+          <br> Note des Joueurs : {{ item[1] }} /100<br>
+        {% endfor %}
+        {% for item in uses %}
+          <br> Taux d'utilisation : {{ item[1] }} %<br>
+        {% endfor %}
+        {% for item in win %}
+        <br> Taux de victoire avec : {{ item[1] }} %<br>
+        {% endfor %}
+      </p>
     </div>
 
     <br>
