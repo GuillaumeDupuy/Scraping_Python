@@ -18,13 +18,18 @@
 
     <h1>Affichage Filtre CSS MongoDB</h1>
 
-    <!-- <div class="content">
-        <p><img src="{{ imgs }}" alt=""> <br>{{ name }}
-          <br>Rang de la carte : {{ rank }} 
-          <br> Note des Joueurs : {{ notes }} 
-          <br> Taux d'utilisation : {{ uses }}
-          <br> Taux de victoire avec : {{ win }}</p>
-    </div> -->
+    <div>
+      {% for item in search %}
+        <p class="filtre">
+          <img src="{{ item[1][1] }}" alt="">
+          <br> {{item[0][1]}}
+          <br> Rang de la carte : {{ item[2][1] }}
+          <br> Note des Joueurs : {{ item[3][1] }} /100
+          <br> Taux d'utilisation : {{ item[4][1] }} %
+          <br> Taux de victoire avec : {{ item[5][1] }} %
+        </p>
+      {% endfor %} 
+    </div>
 
     <div class="content">
       <p class="filtre">

@@ -80,11 +80,11 @@ def affich_filtre():
     # filtre = list(filtre)
     # print(filtre)
 
-    filtre = filter_set(nom, str(request.form['carte']))
-    filtre = list(filtre)
+    name = filter_set(nom, str(request.form['carte'].capitalize()))
+    name = list(name)
 
     index = []
-    for i in filtre:
+    for i in name:
         index.append(i[0])
         # print(index)
 
@@ -113,6 +113,20 @@ def affich_filtre():
         imgs.append(img[index[x]])
         # print(index[x])
 
+    search = []
+    for x in range(len(index)):
+        search.append(name[x])
+        search.append(img[index[x]])
+        search.append(rang[index[x]])
+        search.append(note[index[x]])
+        search.append(use[index[x]])
+        search.append(vic[index[x]])
+
+    chunked_list = list()
+    chunk_size = 6
+    for i in range(0, len(search), chunk_size):
+        chunked_list.append(search[i:i+chunk_size])
+
     # name = nom[int(request.form['carte'])][1]
     # rank = rang[int(request.form['carte'])][1]
     # notes = note[int(request.form['carte'])][1]
@@ -120,7 +134,8 @@ def affich_filtre():
     # win = vic[int(request.form['carte'])][1]
     # imgs = img[int(request.form['carte'])][1]
 
-    return render_template('affich_filtre.html',name=filtre,rank=rank,notes=notes,uses=uses,win=win,imgs=imgs)
+    # return render_template('affich_filtre.html',name=name,rank=rank,notes=notes,uses=uses,win=win,imgs=imgs)
+    return render_template('affich_filtre.html',search=chunked_list)
 
 def filter_set(cards_dict, search_string):
     # print(cards_dict)
