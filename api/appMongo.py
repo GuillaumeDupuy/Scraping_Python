@@ -1,4 +1,3 @@
-from unicodedata import name
 from flask import Flask,render_template, request, redirect, url_for
 from IPython.core.display import HTML
 from flask_pymongo import PyMongo
@@ -81,11 +80,11 @@ def affich_filtre():
     # filtre = list(filtre)
     # print(filtre)
 
-    name = filter_set(nom, str(request.form['carte'].capitalize()))
-    name = list(name)
+    filtre = filter_set(nom, str(request.form['carte']))
+    filtre = list(filtre)
 
     index = []
-    for i in name:
+    for i in filtre:
         index.append(i[0])
         # print(index)
 
@@ -114,27 +113,6 @@ def affich_filtre():
         imgs.append(img[index[x]])
         # print(index[x])
 
-    search = []
-    for x in range(len(index)):
-        search.append(name[x])
-        search.append(img[index[x]])
-        search.append(rang[index[x]])
-        search.append(note[index[x]])
-        search.append(use[index[x]])
-        search.append(vic[index[x]])
-
-    chunked_list = list()
-    chunk_size = 6
-    for i in range(0, len(search), chunk_size):
-        chunked_list.append(search[i:i+chunk_size])
-
-    # print(chunked_list)
-    
-    # print(search[0][1])
-
-    # for item in search:
-    #     print(item[1])
-
     # name = nom[int(request.form['carte'])][1]
     # rank = rang[int(request.form['carte'])][1]
     # notes = note[int(request.form['carte'])][1]
@@ -142,7 +120,7 @@ def affich_filtre():
     # win = vic[int(request.form['carte'])][1]
     # imgs = img[int(request.form['carte'])][1]
 
-    return render_template('affich_filtre.html',name=name,rank=rank,notes=notes,uses=uses,win=win,imgs=imgs,search=chunked_list)
+    return render_template('affich_filtre.html',name=filtre,rank=rank,notes=notes,uses=uses,win=win,imgs=imgs)
 
 def filter_set(cards_dict, search_string):
     # print(cards_dict)

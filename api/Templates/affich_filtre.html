@@ -26,21 +26,7 @@
           <br> Taux de victoire avec : {{ win }}</p>
     </div> -->
 
-    
-    <div>
-      {% for item in search %}
-        <p class="filtre">
-          <img src="{{ item[1][1] }}" alt="">
-          <br> {{item[0][1]}}
-          <br> Rang de la carte : {{ item[2][1] }}
-          <br> Note des Joueurs : {{ item[3][1] }} /100
-          <br> Taux d'utilisation : {{ item[4][1] }} %
-          <br> Taux de victoire avec : {{ item[5][1] }} %
-        </p>
-      {% endfor %} 
-    </div>
-
-    <!-- <div class="content">
+    <div class="content">
       <p class="filtre">
         {% for item in imgs %}
           <img src="{{ item[1] }}" alt="">
@@ -61,7 +47,7 @@
         <br> Taux de victoire avec : {{ item[1] }} %<br>
         {% endfor %}
       </p>
-    </div> -->
+    </div>
 
     <br>
 
