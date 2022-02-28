@@ -136,9 +136,12 @@ div {
 
 .form_label {
   display: flex;
-  margin-left: 480px;
+  margin-left: 500px;
 }
 
+.form_index {
+  text-align: center;
+}
 
 .button2 {
   width: 11%;
