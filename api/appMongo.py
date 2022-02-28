@@ -1,9 +1,10 @@
-from flask import Flask,render_template, request, redirect, url_for
+from flask import Flask,render_template, request, redirect, url_for,jsonify, json, Response
 from IPython.core.display import HTML
 from flask_pymongo import PyMongo
 from pymongo import MongoClient
 from pathlib import Path
 import pandas as pd
+from MongoAPI import *
 from bs4 import *
 import requests 
 import pymongo
@@ -20,10 +21,74 @@ mongo = PyMongo(app)
 UPLOAD_FOLDER = 'static/files'
 app.config['UPLOAD_FOLDER'] =  UPLOAD_FOLDER
 
-@app.route("/")
+@app.route("/", methods=['GET', 'POST'])
 def home_page():
+    return render_template("index.html")
+
+@app.route("/db_post/", methods=['GET', 'POST'])
+def db_post():
+    donnes = MongoClient('localhost',27017)[str(request.form['db'])][str(request.form['coll'])].find({})
+    return render_template("db_post.html",
+        donnes=donnes)
+
+@app.route('/mongodb', methods=['GET'])
+def mongo_read():
+    data = request.json
+    if data is None or data == {}:
+        return Response(response=json.dumps({"Error": "Please provide connection information"}),
+                        status=400,
+                        mimetype='application/json')
+    obj1 = MongoAPI(data)
+    response = obj1.read()
+    return Response(response=json.dumps(response),
+                    status=200,
+                    mimetype='application/json')
+
+@app.route('/mongodb', methods=['POST'])
+def mongo_write():
+    data = request.json
+    if data is None or data == {} or 'Document' not in data:
+        return Response(response=json.dumps({"Error": "Please provide connection information"}),
+                        status=400,
+                        mimetype='application/json')
+    obj1 = MongoAPI(data)
+    response = obj1.write(data)
+    return Response(response=json.dumps(response),
+                    status=200,
+                    mimetype='application/json')
+                
+
+@app.route('/mongodb', methods=['PUT'])
+def mongo_update():
+    data = request.json
+    if data is None or data == {} or 'DataToBeUpdated' not in data:
+        return Response(response=json.dumps({"Error": "Please provide connection information"}),
+                        status=400,
+                        mimetype='application/json')
+    obj1 = MongoAPI(data)
+    response = obj1.update()
+    return Response(response=json.dumps(response),
+                    status=200,
+                    mimetype='application/json')
+                
+
+@app.route('/mongodb', methods=['DELETE'])
+def mongo_delete():
+    data = request.json
+    if data is None or data == {} or 'Filter' not in data:
+        return Response(response=json.dumps({"Error": "Please provide connection information"}),
+                        status=400,
+                        mimetype='application/json')
+    obj1 = MongoAPI(data)
+    response = obj1.delete(data)
+    return Response(response=json.dumps(response),
+                    status=200,
+                    mimetype='application/json')
+
+@app.route("/db/")
+def db():
     cards = mongo.db.cards.find({})
-    return render_template("index.html",
+    return render_template("db.html",
         cards=cards)
 
 @app.route('/post_filtre/', methods=['GET', 'POST'])
@@ -148,12 +213,12 @@ def filter_set(cards_dict, search_string):
         return False
     return filter(iterator_func, cards_dict)
 
-@app.route('/dashboard/')
+@app.route('/brut/')
 def dashboard():
     cards = mongo.db.cards.find({})
     # for cards in cards:
     #     print(cards)
-    return render_template("dashboard.html",
+    return render_template("brut.html",
         cards=cards)
 
 @app.route('/upload/')
@@ -219,4 +284,4 @@ def path_to_image_html(path):
     return '<img src="'+ path + '" width="60" >'
 
 if __name__ == "__main__":
-    app.run(debug="mongodb://localhost:27017/scraping")
+    app.run(debug="mongodb://localhost:27017/")

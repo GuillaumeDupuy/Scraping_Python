@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/style.css') }}">
+    <title>DB choisi</title>
+</head>
+<body>
+    
+    <ul>
+        <li><a href="/">Choisir db</a></li>
+        <li><a href="/db">Affichage CSS</a></li>
+        <li><a href="/dashboard">Affichage Brut</a></li>
+        <li><a href="/post_filtre">Filtre</a></li>
+        <li><a href="/upload">Charger</a></li>
+    </ul>
+  
+    <br>
+    <br>
+
+    <h1>Voici les données de votre DataBase sélectionné</h1>
+
+    <div class="brut">
+        <ol>
+          <label>
+            {% for item in donnes %}
+              <label>
+                <span><br>{{item}} <br> </span>
+              </label>
+            {% endfor %} 
+          </label>
+        </ol>
+    </div>
+      
+</body>
+</html>

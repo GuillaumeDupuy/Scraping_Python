@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/style.css') }}">
+    <title>Affichage DB</title>
+  </head>
+  <body>
+
+    <ul>
+      <li><a href="/">Choisir db</a></li>
+      <li><a href="/db">Affichage CSS</a></li>
+      <li><a href="/dashboard">Affichage Brut</a></li>
+      <li><a href="/post_filtre">Filtre</a></li>
+      <li><a href="/upload">Charger</a></li>
+    </ul>
+
+    <br>
+    <br>
+
+    <h1>Affichage CSS MongoDB</h1>
+
+    <br>
+    
+    <div class="grid-container">
+      {% for item in cards %}
+        <div class="grid-item"><p class="name">  <strong>{{item['Nom']}}</strong></p></div>
+        <div class="grid-item"><img src="{{item['Image']}}" alt=""></div>
+        <div class="grid-item"><p class="index">  Rang de la carte :  {{item['Rang']}}</p></div>
+        <div class="grid-item"><p class="index">  Note des Joueurs :  {{item['Notation /100']}} /100</p></div>
+        <div class="grid-item"><p class="index">  Taux d'utilisation :  {{item['Utilisation %']}} %</p></div>
+        <div class="grid-item"><p class="index">  Taux de victoire avec :  {{item['Victoire %']}} %</p></div>
+        <div class="grid-item item"></div>
+      {% endfor %}
+    </div>
+
+  </body>
+</html>
