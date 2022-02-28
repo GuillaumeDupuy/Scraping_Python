@@ -1,107 +1,107 @@
 ,1,2,3,4,5
-0,Skeleton King,1,51,7%,51%
-1,Archer Queen,2,51,25%,50%
-2,Spear Goblins,3,51,5%,51%
-3,Barbarian Barrel,4,50,18%,50%
-4,Tornado,5,50,20%,50%
-5,Electro Giant,6,50,4%,51%
-6,Giant Snowball,7,50,14%,50%
-7,Royal Hogs,8,50,8%,51%
-8,Royal Ghost,9,50,12%,51%
-9,Lightning,10,50,12%,50%
-10,Cannon,11,50,9%,51%
-11,Graveyard,12,50,14%,50%
-12,Royal Delivery,13,50,7%,51%
-13,Bomber,14,50,5%,51%
-14,Freeze,15,49,6%,51%
-15,Bandit,16,49,18%,50%
-16,Ice Wizard,17,49,5%,50%
-17,Skeleton Army,18,49,17%,50%
-18,Dark Prince,19,49,16%,50%
-19,Valkyrie,20,49,20%,50%
-20,Fire Spirit,21,49,11%,50%
-21,Rocket,22,49,9%,50%
-22,Zappies,23,49,4%,51%
-23,Earthquake,24,49,9%,50%
-24,P.E.K.K.A,25,49,7%,50%
-25,The Log,26,49,33%,50%
-26,Baby Dragon,27,49,12%,50%
-27,Electro Spirit,28,48,13%,50%
-28,Cannon Cart,29,48,4%,50%
-29,Goblin Cage,30,48,4%,50%
-30,Heal Spirit,31,48,6%,50%
-31,Royal Giant,32,48,5%,50%
-32,Giant,33,48,13%,50%
-33,Inferno Tower,34,48,6%,50%
-34,Bats,35,48,16%,50%
-35,Mother Witch,36,48,2%,51%
-36,Bowler,37,48,6%,50%
-37,Fisherman,38,48,6%,50%
-38,Skeletons,39,48,21%,50%
-39,Battle Ram,40,48,5%,50%
-40,Ram Rider,41,48,7%,50%
-41,Minions,42,47,5%,50%
-42,Arrows,43,47,20%,49%
-43,Princess,44,47,6%,50%
-44,Tombstone,45,47,9%,50%
-45,Fireball,46,47,28%,49%
-46,Executioner,47,47,2%,50%
-47,Minion Horde,48,47,6%,49%
-48,X-Bow,49,47,4%,50%
-49,Guards,50,47,9%,49%
-50,Mortar,51,47,5%,50%
-51,Ice Golem,52,47,7%,50%
-52,Night Witch,53,46,7%,49%
-53,Magic Archer,54,46,7%,49%
-54,Goblin Barrel,55,46,7%,49%
-55,Electro Wizard,56,46,12%,49%
-56,Goblins,57,46,1%,51%
-57,Sparky,58,46,6%,49%
-58,Hunter,59,46,5%,49%
-59,Zap,60,46,20%,49%
-60,Barbarians,61,46,4%,49%
-61,Skeleton Barrel,62,46,2%,50%
-62,Hog Rider,63,46,9%,49%
-63,Wall Breakers,64,46,5%,49%
-64,Miner,65,46,15%,49%
-65,Inferno Dragon,66,46,11%,49%
-66,Mini P.E.K.K.A,67,45,6%,49%
-67,Mega Knight,68,45,10%,49%
-68,Balloon,69,45,8%,49%
-69,Elite Barbarians,70,45,7%,49%
-70,Goblin Gang,71,45,3%,50%
-71,Three Musketeers,72,45,3%,50%
-72,Witch,73,45,3%,49%
-73,Electro Dragon,74,45,4%,49%
-74,Mega Minion,75,45,12%,49%
-75,Golem,76,45,5%,49%
-76,Lumberjack,77,45,7%,49%
-77,Goblin Drill,78,45,3%,49%
-78,Musketeer,79,44,7%,49%
-79,Dart Goblin,80,44,4%,49%
-80,Poison,81,44,6%,49%
-81,Tesla,82,44,7%,49%
-82,Bomb Tower,83,44,3%,49%
-83,Furnace,84,43,1%,51%
-84,Rascals,85,43,2%,49%
-85,Lava Hound,86,43,7%,48%
-86,Skeleton Dragons,87,43,4%,48%
-87,Ice Spirit,88,42,4%,48%
-88,Knight,89,42,5%,48%
-89,Elixir Collector,90,42,2%,49%
-90,Battle Healer,91,42,1%,49%
+0,Archer Queen,1,51,25%,50%
+1,The Log,2,51,35%,50%
+2,Knight,3,51,5%,51%
+3,Royal Delivery,4,51,8%,51%
+4,Royal Hogs,5,51,8%,51%
+5,Cannon,6,51,9%,51%
+6,Skeleton King,7,51,7%,51%
+7,Skeletons,8,50,22%,50%
+8,P.E.K.K.A,9,50,8%,50%
+9,Electro Spirit,10,50,14%,50%
+10,Earthquake,11,50,10%,50%
+11,Mortar,12,50,5%,51%
+12,Fire Spirit,13,50,12%,50%
+13,Tornado,14,50,20%,50%
+14,X-Bow,15,49,4%,50%
+15,Ice Wizard,16,49,6%,50%
+16,Rocket,17,49,10%,50%
+17,Royal Giant,18,49,5%,50%
+18,Graveyard,19,49,14%,50%
+19,Royal Ghost,20,49,13%,50%
+20,Cannon Cart,21,49,4%,50%
+21,Lightning,22,49,14%,50%
+22,Tombstone,23,49,9%,50%
+23,Zappies,24,49,4%,50%
+24,Ram Rider,25,49,7%,50%
+25,Giant Snowball,26,49,14%,50%
+26,Barbarian Barrel,27,49,18%,50%
+27,Valkyrie,28,49,20%,50%
+28,Spear Goblins,29,49,4%,50%
+29,Bandit,30,49,19%,50%
+30,Fisherman,31,48,6%,50%
+31,Fireball,32,48,27%,49%
+32,Goblin Barrel,33,48,8%,50%
+33,Princess,34,48,7%,50%
+34,Magic Archer,35,48,7%,50%
+35,Dark Prince,36,48,16%,49%
+36,Tesla,37,48,7%,50%
+37,Freeze,38,48,6%,50%
+38,Executioner,39,48,2%,50%
+39,Guards,40,48,9%,50%
+40,Battle Ram,41,48,7%,50%
+41,Bomber,42,48,6%,49%
+42,Miner,43,47,14%,49%
+43,Electro Wizard,44,47,13%,49%
+44,Poison,45,47,6%,50%
+45,Minions,46,47,6%,50%
+46,Skeleton Army,47,47,16%,49%
+47,Baby Dragon,48,47,12%,49%
+48,Minion Horde,49,47,7%,49%
+49,Giant,50,47,13%,49%
+50,Bomb Tower,51,47,3%,50%
+51,Zap,52,47,21%,49%
+52,Dart Goblin,53,47,5%,49%
+53,Heal Spirit,54,46,7%,49%
+54,Bats,55,46,16%,49%
+55,Electro Giant,56,46,4%,49%
+56,Balloon,57,46,7%,49%
+57,Inferno Tower,58,46,7%,49%
+58,Hog Rider,59,46,9%,49%
+59,Arrows,60,46,18%,49%
+60,Witch,61,46,2%,50%
+61,Rascals,62,46,2%,50%
+62,Archers,63,46,2%,50%
+63,Inferno Dragon,64,46,10%,49%
+64,Ice Spirit,65,46,4%,49%
+65,Barbarians,66,46,3%,49%
+66,Goblin Cage,67,46,4%,49%
+67,Skeleton Barrel,68,46,2%,50%
+68,Bowler,69,45,6%,49%
+69,Hunter,70,45,4%,49%
+70,Mega Knight,71,45,9%,49%
+71,Ice Golem,72,45,7%,49%
+72,Mini P.E.K.K.A,73,45,6%,49%
+73,Mega Minion,74,45,10%,49%
+74,Electro Dragon,75,45,4%,49%
+75,Sparky,76,45,6%,48%
+76,Elite Barbarians,77,44,6%,48%
+77,Goblin Drill,78,44,3%,49%
+78,Mother Witch,79,44,2%,49%
+79,Goblin Gang,80,44,3%,49%
+80,Wall Breakers,81,44,4%,48%
+81,Goblins,82,44,1%,50%
+82,Lumberjack,83,44,7%,48%
+83,Musketeer,84,44,6%,48%
+84,Prince,85,43,4%,48%
+85,Golem,86,43,5%,48%
+86,Goblin Giant,87,43,2%,49%
+87,Firecracker,88,43,1%,49%
+88,Night Witch,89,43,7%,48%
+89,Skeleton Dragons,90,43,3%,48%
+90,Three Musketeers,91,42,3%,48%
 91,Giant Skeleton,92,42,1%,49%
-92,Prince,93,42,4%,48%
-93,Elixir Golem,94,42,1%,49%
-94,Flying Machine,95,42,4%,48%
-95,Goblin Giant,96,40,2%,48%
+92,Lava Hound,93,42,5%,48%
+93,Royal Recruits,94,41,1%,49%
+94,Battle Healer,95,41,1%,48%
+95,Elixir Collector,96,40,2%,47%
 96,Wizard,97,40,1%,48%
-97,Mirror,98,39,1%,48%
-98,Goblin Hut,99,39,1%,50%
-99,Clone,100,39,2%,47%
-100,Royal Recruits,101,38,1%,47%
-101,Rage,102,38,3%,47%
-102,Archers,103,38,2%,47%
-103,Barbarian Hut,104,37,0%,48%
-104,Golden Knight,105,37,1%,47%
-105,Firecracker,106,36,1%,47%
+97,Rage,98,39,2%,47%
+98,Barbarian Hut,99,39,0%,47%
+99,Golden Knight,100,39,1%,48%
+100,Elixir Golem,101,38,1%,47%
+101,Furnace,102,38,1%,48%
+102,Flying Machine,103,38,3%,46%
+103,Goblin Hut,104,36,0%,49%
+104,Clone,105,32,2%,45%
+105,Mirror,106,32,0%,46%
