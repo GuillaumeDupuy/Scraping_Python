@@ -57,11 +57,10 @@ def mongo_write():
                     status=200,
                     mimetype='application/json')
                 
-
 @app.route('/mongodb', methods=['PUT'])
 def mongo_update():
     data = request.json
-    if data is None or data == {} or 'DataToBeUpdated' not in data:
+    if data is None or data == {} or 'Updated' not in data:
         return Response(response=json.dumps({"Error": "Please provide connection information"}),
                         status=400,
                         mimetype='application/json')
@@ -71,7 +70,6 @@ def mongo_update():
                     status=200,
                     mimetype='application/json')
                 
-
 @app.route('/mongodb', methods=['DELETE'])
 def mongo_delete():
     data = request.json

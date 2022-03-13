@@ -18,7 +18,6 @@ class MongoAPI:
 
         
     def write(self, data):
-        # log.info('Writing Data')
         new_document = data['Document']
         response = self.collection.insert_one(new_document)
         output = {'Status': 'Successfully Inserted',
@@ -28,14 +27,14 @@ class MongoAPI:
     
     def update(self):
         filt = self.data['Filter']
-        updated_data = {"$set": self.data['DataToBeUpdated']}
+        updated_data = {"$set": self.data['Updated']}
         response = self.collection.update_one(filt, updated_data)
         output = {'Status': 'Successfully Updated' if response.modified_count > 0 else "Nothing was updated."}
         return output
     
     
     def delete(self, data):
-        filt = data['Document']
+        filt = data['Filter']
         response = self.collection.delete_one(filt)
         output = {'Status': 'Successfully Deleted' if response.deleted_count > 0 else "Document not found."}
         return output
