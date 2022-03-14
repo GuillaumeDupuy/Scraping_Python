@@ -1,5 +1,6 @@
 # IMPORT
 
+from re import A
 from IPython.core.display import HTML
 import plotly.figure_factory as ff
 import matplotlib.pyplot as plt

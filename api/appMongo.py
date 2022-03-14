@@ -31,7 +31,7 @@ def db_post():
     return render_template("db_post.html",
         donnes=donnes)
 
-@app.route('/mongodb', methods=['GET'])
+@app.route('/mongodb/get', methods=['GET'])
 def mongo_read():
     data = request.json
     if data is None or data == {}:
@@ -44,7 +44,7 @@ def mongo_read():
                     status=200,
                     mimetype='application/json')
 
-@app.route('/mongodb', methods=['POST'])
+@app.route('/mongodb/post', methods=['POST'])
 def mongo_write():
     data = request.json
     if data is None or data == {} or 'Document' not in data:
@@ -57,7 +57,7 @@ def mongo_write():
                     status=200,
                     mimetype='application/json')
                 
-@app.route('/mongodb', methods=['PUT'])
+@app.route('/mongodb/put', methods=['PUT'])
 def mongo_update():
     data = request.json
     if data is None or data == {} or 'Updated' not in data:
@@ -70,7 +70,7 @@ def mongo_update():
                     status=200,
                     mimetype='application/json')
                 
-@app.route('/mongodb', methods=['DELETE'])
+@app.route('/mongodb/delete', methods=['DELETE'])
 def mongo_delete():
     data = request.json
     if data is None or data == {} or 'Filter' not in data:
